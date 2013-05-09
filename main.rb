@@ -14,7 +14,7 @@ post '/sms' do
   #require_relative 'twilio_crendentails.rb'
 
   # TEST CREDENTIALS
-  require_relative 'test_crendentails.rb'
+  require_relative 'test_crendentials.rb'
 
   @client = Twilio::REST::Client.new(@@account_sid, @@auth_token)
 
