@@ -1,0 +1,9 @@
+	@function pem($px, $base: 16) {
+    @return ($px / $base) + em;
+	}
+
+	@mixin box-sizing($boxsize: border-box) {
+		-webkit-box-sizing: $boxsize;
+		-moz-box-sizing: $boxsize;
+		box-sizing: $boxsize;
+	}

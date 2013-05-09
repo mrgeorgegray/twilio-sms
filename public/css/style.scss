@@ -1,0 +1,224 @@
+	@import "reset";
+	@import "mixins";
+
+
+/*  SCSS VARIABLES
+    ========================================================================== */
+	@import "variables";
+
+
+/*  ROOT
+    ========================================================================== */
+	* {
+		/* apply a natural box layout model to all elements - paul irish*/
+		@include box-sizing();
+	}
+	html {
+		font-size: 100%;
+	}
+	body {
+		background : $brand-alpha;
+		min-width:252px;
+		margin : 0 auto;
+		padding : 0;
+		font-family: $sans-serif;
+		color: $white;
+		-webkit-font-smoothing: antialiased;
+		&.red { background : $brand-red; }
+		&.blue { background : $brand-blue; }
+		&.green { background : $brand-green; }
+	}
+
+	/*stop input from round corners*/
+	input[type=text], input[type=tel], input[type=email], textarea, input[type=submit] {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	/* Disable iOS/WinMobile font size changes */
+	@media screen and (max-width: 600px), screen and (max-device-width: 480px) {
+		html {
+			-o-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+			-moz-text-size-adjust: none;
+			-webkit-text-size-adjust: none; }
+	}
+
+
+
+/*  GLOBAL LINKS
+    ========================================================================== */
+	a {
+		color: $linkcol;
+		text-decoration: underline;
+		&:visited {
+			color: $linkcolvisited;
+			text-decoration: underline;
+		}
+		&:hover {
+			color: $linkcolhover;
+			text-decoration: none;
+		}
+		&:focus {
+			outline: thin dotted;
+			color: $linkcolfocus;
+		}
+	}
+	a:hover,
+	a:active {
+		outline : 0;
+	}
+
+
+
+/*  TYPOGRAPHY
+    ========================================================================== */
+	@import "typography";
+
+
+
+/*  MAIN
+    ========================================================================== */
+	.wrapper {
+		position: relative;
+		max-width: 28em;
+		width: 90%;
+		margin: 0 auto;
+		padding: 0 0 3em;
+		text-align: center;
+	}
+
+	.ir {
+		display: block;
+		overflow: hidden;
+		border: 0;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		text-align: left;
+		text-indent: -999em;
+		direction: ltr;
+		*line-height: 0; }
+
+	h1.logo{
+		display: block;
+		margin: .5em auto 0;
+		background: url('../img/logo-banner.png') no-repeat center center;
+		background-size: cover;
+		width: 300px;
+		height: 138px;
+	}
+
+	#map-canvas{
+		margin: 0 auto;
+		border: 6px solid $brand-beta;
+	  height: 400px;
+	  width: 100%;
+	}
+
+	.info-window{
+		color: $darkgrey;
+	  text-align: center;
+	  max-width: 14em;
+		display: block;
+		margin: 0 auto;
+		h2{
+			font-size: 1.3em;
+			margin: 0;
+		}
+	}
+
+	#status p{
+		font-size: pem(18);
+		display: block;
+		margin: 0 auto .5em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#response {
+		background: $brand-beta;
+		color: $white;
+		margin: 1em 0;
+		p{
+			font-size: pem(18);
+			display: block;
+			margin: 0 auto .5em;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 0.8em 0 0.4em;
+		}
+	}
+
+	form{
+		width: 100%;
+		float: left;
+		font-size: 1.2em;
+		margin: 0 auto;
+		label{
+			display: block;
+			margin: 0 auto .5em;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		input[type="text"],
+		input[type="tel"]{
+			border-left: 6px solid $brand-beta;
+			border-right: none;
+			border-top: 6px solid $brand-beta;
+			border-bottom: none;
+			background: $white;
+			font-family: $sans-serif;
+			color: $darkgrey;
+			padding: 0.3em 0.8em;
+			width: 72%;
+			float: left;
+		}
+		input[type="submit"]{
+			width: 28%;
+			float: left;
+			padding: 0.8em 0 0.6em;
+			border:none;
+			background: $brand-beta;
+			color: $white;
+			font-family: $sans-serif;
+	    text-transform: uppercase;
+	    letter-spacing: 1px;
+	    font-size: pem(14);
+	    line-height:1;
+	    &:hover{
+	    	background: darken($brand-beta, 20);
+	    }
+		}
+	}
+
+	a.btn,
+  .btn{
+    display:block;
+    margin: 0 ;
+    padding: 0.9em 0 1.3em;
+    border:none;
+    background: $brand-beta;
+    color: $white;
+    text-decoration:none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font:inherit;
+    font-size: pem(14);
+    font-family: $sans-serif;
+    line-height:1;
+    cursor:pointer;
+    &:hover,
+    &.current{
+      background: darken($brand-beta, 14);
+    }
+  }
+
+	.smallprint{
+		margin: 1.5em auto;
+		max-width: 18em;
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+

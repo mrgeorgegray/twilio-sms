@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Findee | SMS your location</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript">var switchTo5x=false;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-623dfed7-9db4-934-903-a11b6a24c755", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <h1 class="ir logo">Findee App</h1>
+
+      <%= yield %>
+
+      <div id="map-canvas"></div>
+
+      <p class="smallprint">This small little app was built on <a href="http://www.sinatrarb.com/">Sinatra</a> and uses the <a href="https://www.twilio.com">Twilio API</a></p>
+      <p>Share the love...</p>
+      <span class='st_twitter_large' displayText='Tweet'></span>
+      <span class='st_facebook_large' displayText='Facebook'></span>
+      <span class='st_sharethis_large' displayText='ShareThis'></span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="/js/main-ck.js"></script>
+  </body>
+</html>
