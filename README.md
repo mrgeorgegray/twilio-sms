@@ -1,4 +1,5 @@
-twilio-sms
-==========
+Findee
+======
 
-Twilio Sinatra SMS app
+A simple sinatra app using the Twilio API
+_________________________________________
